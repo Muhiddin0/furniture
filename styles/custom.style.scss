@@ -1,0 +1,174 @@
+:root {
+  --black: #1e1e1e;
+  --gray-light: #eee;
+  --best-seling-active: 0px;
+  --bg-light: #f7f7f7;
+  --transparent-black: #000000a9;
+  --verdigris: #3aa39f;
+}
+
+* {
+  font-family: Gilroy-Regular;
+}
+
+.container {
+  padding: 0 2rem;
+  margin: 0 auto;
+  // border: 1px solid red;
+}
+body {
+  overflow-x: hidden;
+}
+
+// header
+header {
+  transition: 300ms;
+  background: #fff;
+  * {
+    color: #000;
+  }
+  &.transparent {
+    background: transparent;
+    * {
+      color: #fff;
+    }
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--transparent-black);
+    transition: 250ms;
+    ul {
+      position: relative;
+      left: -350px;
+      width: 300px;
+      height: 100%;
+      padding: 1.5rem;
+      background: #fff;
+      flex-direction: column;
+      gap: 12px;
+      transition: 250ms;
+      * {
+        color: var(--black) !important;
+      }
+    }
+  }
+  nav.active {
+    z-index: 10000;
+    opacity: 1;
+    visibility: visible;
+    ul {
+      left: 0;
+    }
+  }
+}
+
+.best-selling-card {
+  & img {
+    transition: 250ms;
+  }
+  &:hover img:nth-child(1) {
+    transform: translateY(-10px);
+  }
+  &:hover img:nth-child(2) {
+    scale: 1.06;
+  }
+}
+
+.active-bg {
+  transition: 300ms;
+}
+
+.eperence-bg {
+  display: block;
+  border-radius: 49px;
+  background: url("../assets/images/experence.svg"),
+    lightgray 50% / cover no-repeat;
+  filter: blur(25px);
+}
+
+.bg-blur-img {
+  border-radius: 29px;
+  opacity: 0.5;
+  filter: blur(25px);
+  &.room-1 {
+    background: url("../assets/images/room-1.svg"),
+      lightgray -84.803px -117.952px / 214.052% 164.683% no-repeat;
+  }
+  &.room-2 {
+    background: url("../assets/images/room-2.svg"),
+      lightgray -84.803px -117.952px / 214.052% 164.683% no-repeat;
+  }
+  &.room-3 {
+    background: url("../assets/images/room-3.svg"),
+      lightgray -84.803px -117.952px / 214.052% 164.683% no-repeat;
+  }
+}
+
+.color-filter {
+  visibility: hidden;
+  transition: 250ms;
+}
+.color-filter.active {
+  visibility: visible;
+}
+
+.furnitur-card {
+  & img:nth-child(1) {
+    position: relative;
+    z-index: 10;
+    transition: 250ms;
+  }
+  &:hover img:nth-child(1) {
+    transform: translateY(-20px);
+    scale: 1.05;
+  }
+}
+
+@media (max-width: 1024px) {
+  .filter {
+    visibility: collapse;
+    opacity: 0;
+    transition: 250ms;
+    & > div {
+      position: relative;
+      left: -350px;
+      transition: 250ms;
+    }
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      & > div {
+        left: 0px;
+      }
+    }
+  }
+}
+
+.backend {
+  position: fixed;
+  z-index: -1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: 250ms;
+  transition-property: visibility;
+  & > div {
+    right: -350px;
+    transition: 250ms;
+  }
+  &.active {
+    z-index: 9000;
+    visibility: visible;
+    opacity: 1;
+    & > div {
+      right: 0;
+    }
+  }
+}

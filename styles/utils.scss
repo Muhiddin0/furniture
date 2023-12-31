@@ -1,0 +1,45 @@
+.logo {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.home-bg {
+  & img {
+    background: url("../assets/images/home-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  & span {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 170px;
+    background: linear-gradient(to top, #fff, transparent);
+  }
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  font-size: 10px;
+  border-radius: 100%;
+}
+
+.order-input {
+  @apply outline-none border-[1px] border-slate-400 rounded-md px-3 py-1;
+}
+
+.scroll-disable::-webkit-scrollbar {
+  width: 0px;
+}
