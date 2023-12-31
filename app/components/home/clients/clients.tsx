@@ -3,7 +3,7 @@ import { Slider } from "./components/slider";
 
 type Props = {};
 
-export const Clients = (props: Props) => {
+export const Clients: React.FC<Props> = (Props) => {
   return (
     <section>
       <div className="container !py-12">

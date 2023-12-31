@@ -7,7 +7,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 
 type Props = {};
 
-export const Footer = (props: Props) => {
+export const Footer: React.FC<Props> = (Props) => {
   return (
     <footer className="bg-[var(--bg-light)] py-16">
       <div className="container">

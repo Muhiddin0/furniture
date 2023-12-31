@@ -10,7 +10,7 @@ import { LinkButton } from "@/app/components";
 
 type Props = {};
 
-export const Materials = (props: Props) => {
+export const Materials: React.FC<Props> = (props: Props) => {
   return (
     <div className="flex justify-between items-center flex-col-reverse xl:flex-row gap-x-8 gap-y-16 text-[var(--black)] mt-[150px] xl:mt-[50px] pb-12">
       <div className="flex-grow-[2] xl:max-w-[550px]">

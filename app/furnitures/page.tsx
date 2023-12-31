@@ -21,7 +21,7 @@ import { HeaderTrasform } from "../functions";
 
 type Props = {};
 
-const Product = (props: Props) => {
+const Product: React.FC<Props> = (props) => {
   const pathname = usePathname();
 
   const [furnitures, setFurnitures] = useState([

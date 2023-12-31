@@ -29,7 +29,7 @@ import { SliderCard } from "./slider-card";
 
 type Props = {};
 
-export const Slider = (props: Props) => {
+export const Slider: React.FC<Props> = () => {
   const [furnitures, setFurnitures] = useState([
     {
       type: "Chair",

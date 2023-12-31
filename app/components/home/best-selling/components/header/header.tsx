@@ -4,7 +4,7 @@ import React, { createRef } from "react";
 
 type Props = {};
 
-export const Header = (props: Props) => {
+export const Header: React.FC<Props> = (props: Props) => {
   const activebgRef = createRef<HTMLDivElement>();
 
   function handleChangeItem(toleft: string) {

@@ -5,7 +5,7 @@ import mebel from "@/assets/images/furnitures/fur-1.svg";
 
 type Props = {};
 
-export const Card = (props: Props) => {
+export const Card: React.FC<Props> = (props) => {
   return (
     <div className="p-3 bg-[var(--bg-light)] rounded-md">
       <Image src={mebel} alt="" />

@@ -24,7 +24,7 @@ import user_3 from "@/assets/images/user (3).svg";
 
 type Props = {};
 
-export const Slider = (props: Props) => {
+export const Slider: React.FC<Props> = (props) => {
   const [comments, setComments] = useState([
     {
       bg: comment_bg_1,

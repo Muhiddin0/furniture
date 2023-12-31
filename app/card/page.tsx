@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 
 // components
 import { CardItem, LocationItem } from "./components";
@@ -12,11 +12,11 @@ import Image from "next/image";
 
 type Props = {};
 
-const Card = (props: Props) => {
+const Card: FC<Props> = () => {
   return (
     <section>
-      <div className="container grid grid-cols-12 gap-8">
-        <div className="col-span-8">
+      <div className="container flex justify-between flex-col lg:flex-row gap-8">
+        <div className="flex-grow-[1]">
           <div className="flex items-center gap-3">
             <b className="text-[32px] font-extrabold">Cart</b>
             <p className="text-[20px] text-slate-400">2 ITEMS</p>
@@ -40,12 +40,12 @@ const Card = (props: Props) => {
               <h1>When receiving by cash or card</h1>
             </div>
             <form className="flex flex-col gap-4 p-4 bg-[var(--bg-light)] rounded-[0_0_6px_6px]">
-              <div className="flex gap-4 w-full">
-                <label className="flex flex-col gap-2 w-[50%]">
+              <div className="flex flex-wrap flex-col md:flex-row justify-between gap-4 w-full">
+                <label className="flex flex-col gap-2 flex-grow-[1]">
                   <span className="text-slate-400">First name *</span>
                   <input className="order-input" type="text" />
                 </label>
-                <label className="flex flex-col gap-2 w-[50%]">
+                <label className="flex flex-col gap-2 flex-grow-[1]">
                   <span className="text-slate-400">Last name *</span>
                   <input className="order-input" type="text" />
                 </label>
@@ -73,7 +73,7 @@ const Card = (props: Props) => {
             </div>
           </div>
         </div>
-        <div className="relative col-span-4 text-[var(--black)]">
+        <div className="relative w-full lg:w-[400px] xl:col-span-4 text-[var(--black)]">
           <form className="sticky top-[100px] flex flex-col border-[1px] border-slate-300 rounded-md p-4">
             <b className="text-xl">Order Summary</b>
             <ul className="w-full mt-3 py-4">

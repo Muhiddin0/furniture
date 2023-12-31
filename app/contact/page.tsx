@@ -2,7 +2,7 @@ import React from "react";
 
 type Props = {};
 
-const Contact = (props: Props) => {
+const Contact: React.FC<Props> = (props) => {
   return (
     <>
       {/* Container for demo purpose */}

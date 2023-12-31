@@ -14,7 +14,7 @@ import { LuMenu } from "react-icons/lu";
 
 type Props = {};
 
-export const Header = (props: Props) => {
+export const Header: React.FC<Props> = (props: Props) => {
   const pathname = usePathname();
   const router = useRouter();
 

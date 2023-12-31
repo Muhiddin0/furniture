@@ -6,7 +6,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 type Props = {};
 
-export const WhyChooes = (props: Props) => {
+export const WhyChooes: React.FC<Props> = (props) => {
   return (
     <section>
       <div className="container !py-12">

@@ -6,7 +6,7 @@ import bg from "@/assets/images/home-bg.jpg";
 
 type Props = {};
 
-export const HomeBg = (props: Props) => {
+export const HomeBg: React.FC<Props> = (props) => {
   return (
     <div className="home-bg absolute top-0 left-0 h-[1084px] w-full">
       <Image className="w-full h-full object-cover" src={bg} alt="" />

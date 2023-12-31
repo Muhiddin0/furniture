@@ -4,7 +4,7 @@ import { FaCheck } from "react-icons/fa";
 
 type Props = {};
 
-export const Filter = (props: Props) => {
+export const Filter: React.FC<Props> = (props) => {
   const [color, setColor] = useState<string[]>([
     "#f045",
     "#1045",

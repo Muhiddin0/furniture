@@ -13,7 +13,7 @@ type Props = {
   id: number;
 };
 
-export const SliderCard = ({ img, id }: Props) => {
+export const SliderCard: React.FC<Props> = ({ img, id }) => {
   return (
     <div className="furnitur-card">
       <Link

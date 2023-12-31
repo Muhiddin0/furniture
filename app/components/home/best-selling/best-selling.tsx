@@ -12,7 +12,7 @@ import { LinkButton } from "../..";
 
 type Props = {};
 
-export const BestSelleing = (props: Props) => {
+export const BestSelleing: React.FC<Props> = (props) => {
   return (
     <section className="py-6 bg-[var(--bg-light)]">
       <div className="container">

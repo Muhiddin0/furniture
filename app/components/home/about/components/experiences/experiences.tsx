@@ -9,7 +9,7 @@ import { LinkButton } from "@/app/components";
 
 type Props = {};
 
-export const Experiences = (props: Props) => {
+export const Experiences: React.FC<Props> = (props: Props) => {
   return (
     <div className="flex items-center justify-between gap-y-12 flex-col xl:flex-row min-h-[700px] mt-[150px] xl:mt-[50px]">
       <div className="md:w-[629px] md:h-[445px] relative">

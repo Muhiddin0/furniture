@@ -6,7 +6,7 @@ import { Materials } from "./components/materials/materials";
 
 type Props = {};
 
-export const About = (props: Props) => {
+export const About: React.FC<Props> = (props: Props) => {
   return (
     <section className=" overflow-hidden">
       <div className="container !py-12">

@@ -4,9 +4,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
 
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -33,10 +30,13 @@ import { FaTwitter } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-type Props = {};
+type Props = {
+  id: number;
+};
 
-export const ProductDetails = (props: Props) => {
+export const ProductDetails = () => {
   const [sliderItems, setSliderItems] = useState([stol_1, stol_2, stol_3]);
   const [pCount, setPCount] = useState<number>(1);
 
@@ -90,6 +90,15 @@ export const ProductDetails = (props: Props) => {
             <button className="py-3 px-5 rounded-md bg-orange-500 text-white">
               Add to Cart
             </button>
+          </div>
+
+          <div className="my-5">
+            <Link
+              href={"/card"}
+              className="flex justify-center items-center w-full p-3 bg-orange-500 hover:opacity-80 transition-all text-white rounded-lg"
+            >
+              Shop Now
+            </Link>
           </div>
 
           <p className="text-slate-400 mt-6">

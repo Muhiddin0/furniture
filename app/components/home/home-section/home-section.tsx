@@ -3,7 +3,7 @@ import React from "react";
 
 type Props = {};
 
-export const HomeSection = (props: Props) => {
+export const HomeSection: React.FC<Props> = (props) => {
   return (
     <section className="text-white">
       <div className="container relative z-[10] flex items-center min-h-[1084px] flex-col !pt-6">

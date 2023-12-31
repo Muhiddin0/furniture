@@ -12,7 +12,7 @@ import { BacketToggle } from "@/app/functions";
 
 type Props = {};
 
-export const Basket = (props: Props) => {
+export const Basket: React.FC<Props> = () => {
   return (
     <div className="backend fixed top-0 left-0 flex w-full h-screen bg-[var(--transparent-black)] p-4">
       <div className="absolute right-0 top-0 flex flex-col gap-4 w-[300px] h-full p-4 bg-white">

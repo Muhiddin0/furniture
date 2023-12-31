@@ -10,7 +10,7 @@ interface Props {
   setValue: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export const Counter = ({ value, setValue }: Props) => {
+export const Counter: React.FC<Props> = ({ value, setValue }: Props) => {
   return (
     <div className="flex justify-between w-[160px] border-[1px] border-[var(--black)] rounded-md p-[16px]">
       <button

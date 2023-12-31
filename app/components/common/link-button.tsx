@@ -10,7 +10,7 @@ type Props = {
   title: string;
 };
 
-export const LinkButton = ({ link, title }: Props) => {
+export const LinkButton: React.FC<Props> = ({ link, title }: Props) => {
   return (
     <Link className="flex gap-3 font-bold text-orange-500" href={link}>
       <span>{title}</span>
