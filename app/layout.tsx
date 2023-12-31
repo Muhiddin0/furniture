@@ -8,9 +8,6 @@ import "../styles/utils.scss";
 
 // components
 import * as components from "./components";
-import { useEffect } from "react";
-import { ErrorBoundary } from "next/dist/client/components/error-boundary";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

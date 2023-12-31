@@ -3,3 +3,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.loader {
+  position: fixed;
+  z-index: 999999999;
+  visibility: visible;
+  opacity: 1;
+  transition: 250ms;
+  transition-property: opacity;
+}
+.loader.disabled {
+  z-index: -10000;
+  opacity: 0;
+  visibility: hidden;
+}
